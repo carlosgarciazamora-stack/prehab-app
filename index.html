@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PREHAB">
+  <title>PREHAB · Carlos</title>
+  <style>
+    :root{--bg:#07111f;--panel:#101d2e;--panel2:#15263a;--text:#f5f7fb;--muted:#91a2b8;--line:#23364c;--green:#3ddc97;--orange:#ffb648;--red:#ff6376;--blue:#62a8ff;--radius:20px}
+    *{box-sizing:border-box}html{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% -10%,#17375b 0,transparent 38%),var(--bg)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:720px;margin:auto;padding:env(safe-area-inset-top) 16px calc(98px + env(safe-area-inset-bottom))}.top{padding:20px 2px 12px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;letter-spacing:.08em}.phase{color:var(--green);font-size:12px;font-weight:800;background:#123128;padding:7px 10px;border-radius:999px}.hero{padding:23px;border-radius:28px;background:linear-gradient(135deg,#17304b,#0d1b2c);border:1px solid #27415e;box-shadow:0 18px 50px #0005}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.11em;color:var(--muted);text-transform:uppercase}.hero h1{margin:7px 0 8px;font-size:31px;line-height:1.05}.hero p{margin:0;color:var(--muted);line-height:1.45}.status{display:flex;gap:10px;align-items:center;margin-top:20px;padding:13px 15px;border-radius:16px;background:#091728aa}.dot{width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}.dot.orange{background:var(--orange);box-shadow:0 0 16px var(--orange)}.dot.red{background:var(--red);box-shadow:0 0 16px var(--red)}.status b{display:block;font-size:14px}.status small{color:var(--muted)}.sectionTitle{display:flex;justify-content:space-between;align-items:end;margin:25px 2px 12px}.sectionTitle h2{font-size:19px;margin:0}.sectionTitle span{color:var(--muted);font-size:13px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:17px;margin-bottom:12px}.workoutHead{display:flex;justify-content:space-between;gap:12px}.workoutHead h3{margin:4px 0 5px;font-size:20px}.tag{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.08em}.count{min-width:48px;height:48px;border-radius:15px;background:var(--panel2);display:grid;place-items:center;font-weight:900;color:var(--green)}.exerciseLine{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}.exerciseLine:first-of-type{margin-top:13px}.exerciseLine span:last-child{color:var(--muted);white-space:nowrap}.btn{width:100%;border:0;border-radius:15px;padding:14px 16px;font-weight:850;background:var(--green);color:#052018;margin-top:12px}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.danger{background:#351723;color:#ffd9de}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}.metric strong{font-size:25px;display:block}.metric small{color:var(--muted)}.tabs{display:none}.tab.active{display:block}.nav{position:fixed;z-index:30;left:50%;bottom:0;transform:translateX(-50%);width:min(720px,100%);padding:9px 10px calc(9px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:#0b1726f2;backdrop-filter:blur(18px);border-top:1px solid var(--line)}.nav button{border:0;background:none;color:var(--muted);font-size:10px;padding:7px 2px}.nav button i{font-style:normal;font-size:21px;display:block;margin-bottom:3px}.nav button.active{color:var(--green);font-weight:800}.field{margin:13px 0}.field label{display:block;color:var(--muted);font-size:13px;margin:0 0 7px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:13px;background:#0a1727;color:var(--text);padding:12px}.field textarea{min-height:105px;resize:vertical}.rangeWrap{display:grid;grid-template-columns:1fr 42px;gap:10px;align-items:center}.rangeWrap input{padding:0}.rangeVal{text-align:center;font-weight:900;color:var(--green)}.toggleRow{display:flex;gap:8px;flex-wrap:wrap}.toggleRow button{flex:1;min-width:80px;border:1px solid var(--line);background:#0a1727;color:var(--muted);padding:11px;border-radius:12px}.toggleRow button.on{border-color:var(--green);color:var(--green);background:#102c28}.setCard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:15px;margin:10px 0}.setGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.setGrid label{font-size:10px;color:var(--muted);text-align:center}.setGrid input{margin-top:5px;width:100%;min-width:0;border:1px solid var(--line);border-radius:10px;background:#081524;color:var(--text);padding:10px 4px;text-align:center}.setGrid .done{accent-color:var(--green);height:22px}.advice{margin:9px 0 2px;padding:10px 12px;border-radius:11px;background:#0a1727;color:var(--muted);font-size:12px;line-height:1.4}.advice.good{background:#102c28;color:var(--green)}.advice.warn{background:#352b17;color:var(--orange)}.advice.stop{background:#351723;color:#ff9ba8}.progressRow{margin:16px 0}.progressMeta{display:flex;justify-content:space-between;font-size:13px}.bar{height:9px;background:#091524;border-radius:99px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:99px}.notice{border-left:4px solid var(--blue);background:#10243a;padding:13px;border-radius:12px;color:#c7d7e9;font-size:13px;line-height:1.45}.empty{text-align:center;color:var(--muted);padding:25px 10px}.modal{display:none;position:fixed;z-index:50;inset:0;background:#030914ee;overflow:auto}.modal.open{display:block}.modalInner{max-width:720px;margin:auto;padding:18px 16px 50px}.modalTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.iconBtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:13px;padding:10px 13px}.coachBox{white-space:pre-wrap;background:#081524;border:1px solid var(--line);padding:14px;border-radius:14px;color:#c7d7e9;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;max-height:330px;overflow:auto}.weekBtns{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.weekBtns button{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 4px;border-radius:11px}.weekBtns button.on{background:var(--green);color:#052018;border-color:var(--green);font-weight:900}.tiny{font-size:12px;color:var(--muted);line-height:1.45}.hidden{display:none!important}@media(max-width:520px){.hero h1{font-size:27px}.setGrid{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.app{padding-left:12px;padding-right:12px}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <header class="top"><div class="brand">PREHAB</div><div class="phase">RODILLA IZQUIERDA</div></header>
+
+  <section id="home" class="tabs tab active">
+    <div class="hero">
+      <div class="eyebrow" id="homeDate"></div>
+      <h1>Más fuerte antes.<br>Mejor preparado después.</h1>
+      <p>Prehabilitación meniscal · fuerza, síntomas y respuesta a 24 horas.</p>
+      <div class="status"><span id="statusDot" class="dot"></span><div><b id="statusTitle">Sin datos recientes</b><small id="statusText">Completa el control de rodilla</small></div></div>
+    </div>
+    <div class="sectionTitle"><h2>Entrenamiento de hoy</h2><span id="weekLabel">Semana 1/5</span></div>
+    <div id="todayWorkout"></div>
+    <div class="sectionTitle"><h2>Resumen</h2><span>últimos 7 días</span></div>
+    <div class="grid2">
+      <div class="metric"><strong id="sessions7">0</strong><small>sesiones</small></div>
+      <div class="metric"><strong id="sets7">0</strong><small>series registradas</small></div>
+      <div class="metric"><strong id="pain7">—</strong><small>dolor máximo medio</small></div>
+      <div class="metric"><strong id="recovery7">0</strong><small>recuperaciones</small></div>
+    </div>
+  </section>
+
+  <section id="plan" class="tabs tab">
+    <div class="sectionTitle"><h2>Plan de cinco semanas</h2><span>preoperatorio</span></div>
+    <div class="card"><div class="eyebrow">SEMANA ACTUAL</div><div class="weekBtns" id="weekBtns"></div><p class="tiny">La semana sirve para ordenar el historial. Las cargas se deciden por tolerancia, no solo por calendario.</p></div>
+    <div id="planList"></div>
+  </section>
+
+  <section id="knee" class="tabs tab">
+    <div class="sectionTitle"><h2>Control de rodilla</h2><span>regla de 24 h</span></div>
+    <form class="card" id="kneeForm">
+      <div class="field"><label>Dolor en reposo (0–10)</label><div class="rangeWrap"><input id="painRest" type="range" min="0" max="10" value="0"><div id="painRestVal" class="rangeVal">0</div></div></div>
+      <div class="field"><label>Dolor máximo durante el entrenamiento (0–10)</label><div class="rangeWrap"><input id="painTrain" type="range" min="0" max="10" value="0"><div id="painTrainVal" class="rangeVal">0</div></div></div>
+      <div class="field"><label>Respuesta respecto a ayer</label><select id="nextDay"><option value="igual">Igual</option><option value="mejor">Mejor</option><option value="peor">Peor</option></select></div>
+      <div class="field"><label>Señales</label><div class="toggleRow"><button type="button" data-toggle="swelling">Inflamación</button><button type="button" data-toggle="stiffness">Rigidez</button><button type="button" data-toggle="locking">Bloqueo</button><button type="button" data-toggle="instability">Fallo</button></div></div>
+      <div class="field"><label>Observaciones</label><textarea id="kneeNotes" placeholder="Ej.: ligera molestia al bajar escaleras..."></textarea></div>
+      <button class="btn" type="submit">Guardar control</button>
+    </form>
+    <div id="kneeHistory"></div>
+  </section>
+
+  <section id="progress" class="tabs tab">
+    <div class="sectionTitle"><h2>Progreso</h2><span>cargas y constancia</span></div>
+    <div class="grid2">
+      <div class="metric"><strong id="allSessions">0</strong><small>entrenamientos</small></div>
+      <div class="metric"><strong id="allSets">0</strong><small>series completadas</small></div>
+    </div>
+    <div class="card"><div class="eyebrow">CARGA MÁXIMA REGISTRADA</div><div id="exerciseProgress"></div></div>
+    <button class="btn secondary" onclick="exportBackup()">Exportar copia de seguridad</button>
+    <label class="btn secondary" style="display:block;text-align:center">Importar copia<input id="backupInput" class="hidden" type="file" accept="application/json"></label>
+  </section>
+
+  <section id="recovery" class="tabs tab">
+    <div class="sectionTitle"><h2>Recuperación</h2><span>registro diario</span></div>
+    <form class="card" id="recoveryForm">
+      <div class="field"><label>Herramienta</label><select id="recoveryType"><option>Presoterapia</option><option>Sauna</option><option>Frío</option><option>Movilidad</option><option>Cardio Z2</option><option>Descanso</option></select></div>
+      <div class="field"><label>Duración (minutos)</label><input id="recoveryMinutes" type="number" min="1" max="180" value="20"></div>
+      <div class="field"><label>Notas</label><input id="recoveryNotes" placeholder="Opcional"></div>
+      <button class="btn" type="submit">Guardar recuperación</button>
+    </form>
+    <div id="recoveryHistory"></div>
+    <div class="sectionTitle"><h2>Coach</h2><span>sin API ni coste</span></div>
+    <div class="card"><p class="tiny">Genera un informe con tus datos recientes, cópialo y pégalo en nuestra conversación. No se envía nada automáticamente.</p><button class="btn" onclick="copyCoachReport()">Copiar informe para ChatGPT</button><button class="btn secondary" onclick="showCoachReport()">Ver informe</button></div>
+  </section>
+</main>
+
+<nav class="nav">
+  <button class="active" data-tab="home"><i>⌂</i>Hoy</button>
+  <button data-tab="plan"><i>▦</i>Plan</button>
+  <button data-tab="knee"><i>◉</i>Rodilla</button>
+  <button data-tab="progress"><i>↗</i>Progreso</button>
+  <button data-tab="recovery"><i>♻</i>Recuperar</button>
+</nav>
+
+<div id="workoutModal" class="modal"><div class="modalInner"><div class="modalTop"><div><div class="eyebrow">REGISTRO DE SESIÓN</div><h2 id="modalTitle" style="margin:4px 0"></h2></div><button class="iconBtn" onclick="closeWorkout()">Cerrar</button></div><div id="workoutForm"></div><button class="btn" onclick="saveWorkout()">Finalizar y guardar</button><button class="btn danger" onclick="closeWorkout()">Salir sin guardar</button></div></div>
+<div id="reportModal" class="modal"><div class="modalInner"><div class="modalTop"><h2>Informe para ChatGPT</h2><button class="iconBtn" onclick="document.getElementById('reportModal').classList.remove('open')">Cerrar</button></div><div id="coachReport" class="coachBox"></div><button class="btn" onclick="copyCoachReport()">Copiar informe</button></div></div>
+
+<script>
+const KEY='prehab_carlos_v1';
+const DAYS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const template={version:3,week:1,plan:[
+  {id:'a',day:0,name:'Pierna A',focus:'Cuádriceps y control',exercises:[
+    {name:'Prensa unilateral',sets:4,reps:'8',rir:'2–3',unilateral:true},
+    {name:'Extensión de cuádriceps unilateral',sets:3,reps:'10',rir:'2–3',unilateral:true},
+    {name:'Step-up bajo',sets:3,reps:'8/lado',rir:'2–3',unilateral:true},
+    {name:'Curl femoral unilateral',sets:3,reps:'10',rir:'2–3',unilateral:true}
+  ]},
+  {id:'z1a',day:1,name:'Cardio Z2',focus:'Sin impacto',exercises:[{name:'Bicicleta o BikeErg',sets:1,reps:'30–40 min',rir:'Suave'}]},
+  {id:'b',day:2,name:'Pierna B',focus:'Cadena posterior y cadera',exercises:[
+    {name:'Peso muerto rumano',sets:4,reps:'8',rir:'2–3'},
+    {name:'Hip thrust',sets:4,reps:'8',rir:'2–3'},
+    {name:'Curl femoral unilateral',sets:3,reps:'10',rir:'2–3',unilateral:true},
+    {name:'Abducción de cadera',sets:3,reps:'12–15',rir:'2–3'}
+  ]},
+  {id:'mob',day:3,name:'Recuperación',focus:'Movilidad o tren superior',exercises:[{name:'Movilidad controlada',sets:1,reps:'15–20 min',rir:'Sin dolor'}]},
+  {id:'c',day:4,name:'Pierna C',focus:'Fuerza global tolerada',exercises:[
+    {name:'Prensa unilateral',sets:3,reps:'10',rir:'2–3',unilateral:true},
+    {name:'Extensión de cuádriceps unilateral',sets:3,reps:'12',rir:'2–3',unilateral:true},
+    {name:'Curl femoral unilateral',sets:3,reps:'12',rir:'2–3',unilateral:true},
+    {name:'Elevación de gemelo',sets:3,reps:'12–15',rir:'2–3'}
+  ]},
+  {id:'z2b',day:6,name:'Cardio Z2',focus:'Sin impacto',exercises:[{name:'Bicicleta o BikeErg',sets:1,reps:'30–45 min',rir:'Suave'}]}
+],sessions:[],checkins:[],recovery:[]};
+const CALIBRATION={id:'cal',day:0,name:'Calibración inicial',focus:'Semana 1 · Día 1',calibration:true,exercises:[
+  {name:'Prensa unilateral · izquierda',sets:3,reps:'10',rir:'2–3',step:5,calibration:true},
+  {name:'Prensa unilateral · derecha',sets:3,reps:'10',rir:'2–3',step:5,calibration:true},
+  {name:'Extensión de cuádriceps · izquierda',sets:3,reps:'10',rir:'2–3',step:2.5,calibration:true},
+  {name:'Extensión de cuádriceps · derecha',sets:3,reps:'10',rir:'2–3',step:2.5,calibration:true},
+  {name:'Curl femoral · izquierda',sets:3,reps:'10',rir:'2–3',step:2.5,calibration:true},
+  {name:'Curl femoral · derecha',sets:3,reps:'10',rir:'2–3',step:2.5,calibration:true}
+]};
+let state=load();let activeWorkout=null;let kneeFlags={swelling:false,stiffness:false,locking:false,instability:false};persist();
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY));if(!x||!x.plan)return clone(template);if((x.version||0)<template.version){x.version=template.version;x.plan=clone(template.plan)}return x}catch(e){return clone(template)}}
+function persist(){localStorage.setItem(KEY,JSON.stringify(state))}
+function planForWeek(){return state.week===1?[CALIBRATION,...state.plan.filter(x=>x.id!=='a')]:state.plan}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function dateISO(d=new Date()){return d.toISOString().slice(0,10)}
+function niceDate(s){return new Intl.DateTimeFormat('es-ES',{day:'numeric',month:'short'}).format(new Date(s+'T12:00:00'))}
+function switchTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));render()}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+function classify(c){if(!c)return {level:'none',title:'Sin datos recientes',text:'Completa el control de rodilla'};if(c.locking||c.instability||c.swelling||c.painTrain>=4)return {level:'red',title:'No progresar',text:'Revisa síntomas antes de continuar'};if(c.painTrain===3||c.stiffness||c.nextDay==='peor')return {level:'orange',title:'Precaución',text:'Mantén o reduce la carga'};return {level:'green',title:'Rodilla estable',text:'Criterios favorables de tolerancia'}}
+function latestCheck(){return [...state.checkins].sort((a,b)=>b.created.localeCompare(a.created))[0]}
+function render(){
+  document.getElementById('homeDate').textContent=new Intl.DateTimeFormat('es-ES',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
+  document.getElementById('weekLabel').textContent=`Semana ${state.week}/5`;
+  const cs=classify(latestCheck()),dot=document.getElementById('statusDot');dot.className='dot'+(cs.level==='orange'?' orange':cs.level==='red'?' red':'');document.getElementById('statusTitle').textContent=cs.title;document.getElementById('statusText').textContent=cs.text;
+  renderToday();renderPlan();renderKneeHistory();renderRecovery();renderStats();renderProgress();renderWeeks();
+}
+function workoutCard(w,compact=false){return `<div class="card"><div class="workoutHead"><div><div class="tag">${DAYS[w.day].toUpperCase()} · ${esc(w.focus)}</div><h3>${esc(w.name)}</h3></div><div class="count">${w.exercises.length}</div></div>${w.calibration?'<div class="notice" style="margin-top:13px">Busca 10 repeticiones con 2–3 en reserva. La app calculará el siguiente peso.</div>':''}${w.exercises.map(e=>`<div class="exerciseLine"><span>${esc(e.name)}</span><span>${esc(e.sets)} × ${esc(e.reps)}</span></div>`).join('')}<button class="btn" onclick="startWorkout('${w.id}')">${w.calibration?'Empezar calibración':'Registrar sesión'}</button></div>`}
+function renderToday(){const day=new Date().getDay(),w=planForWeek().find(x=>x.day===day),el=document.getElementById('todayWorkout');el.innerHTML=w?workoutCard(w):`<div class="card empty">Hoy toca descanso. La recuperación también forma parte del plan.</div>`}
+function renderPlan(){document.getElementById('planList').innerHTML=planForWeek().map(w=>workoutCard(w)).join('')}
+function renderWeeks(){document.getElementById('weekBtns').innerHTML=[1,2,3,4,5].map(n=>`<button class="${state.week===n?'on':''}" onclick="setWeek(${n})">${n}</button>`).join('')}
+function setWeek(n){state.week=n;persist();render()}
+function startWorkout(id){
+  activeWorkout=clone(planForWeek().find(x=>x.id===id));
+  if(!activeWorkout)return;
+  document.getElementById('modalTitle').textContent=activeWorkout.name;
+  document.getElementById('workoutForm').innerHTML=(activeWorkout.calibration?'<div class="notice">Calienta 8–10 min en bicicleta. Empieza claramente ligero, completa 10 repeticiones y escribe cuántas más podrías haber realizado (RIR). Descansa 2–3 min entre intentos.</div>':'')+activeWorkout.exercises.map((e,ei)=>`<div class="setCard"><h3 style="margin:0 0 4px">${esc(e.name)}</h3><div class="tiny">Objetivo: ${e.sets} × ${esc(e.reps)} · RIR ${esc(e.rir)}</div>${Array.from({length:e.sets},(_,si)=>`<div style="margin-top:14px"><div class="eyebrow">SERIE ${si+1}</div><div class="setGrid"><label>KG<input inputmode="decimal" type="number" min="0" step="${e.step||2.5}" data-e="${ei}" data-s="${si}" data-k="weight" placeholder="—"></label><label>REPS<input inputmode="numeric" type="number" min="0" max="50" data-e="${ei}" data-s="${si}" data-k="reps" placeholder="—"></label><label>RIR<input inputmode="numeric" type="number" min="0" max="10" data-e="${ei}" data-s="${si}" data-k="rir" placeholder="—"></label><label>DOLOR<input inputmode="numeric" type="number" min="0" max="10" value="0" data-e="${ei}" data-s="${si}" data-k="pain"></label><label>HECHA<input class="done" type="checkbox" data-e="${ei}" data-s="${si}" data-k="done"></label></div><div class="advice" id="advice-${ei}-${si}">Introduce kg, repeticiones y RIR para recibir la recomendación.</div></div>`).join('')}</div>`).join('');
+  document.querySelectorAll('#workoutForm input').forEach(input=>input.addEventListener('input',()=>{if(input.dataset.k==='weight')delete input.dataset.auto;updateSetAdvice(Number(input.dataset.e),Number(input.dataset.s))}));
+  document.getElementById('workoutModal').classList.add('open');
+}
+function targetReps(e){return parseInt(e.reps,10)||10}
+function stepFor(e){if(e.step)return e.step;if(/prensa/i.test(e.name))return 5;return 2.5}
+function changedWeight(weight,pct,step){let n=Math.round((weight*(1+pct))/step)*step;if(pct>0&&n<=weight)n=weight+step;if(pct<0&&n>=weight)n=Math.max(step,weight-step);return Number(n.toFixed(2))}
+function adviceFor(e,weight,reps,rir,pain){
+  if(!weight||!reps||Number.isNaN(rir))return {cls:'',text:'Introduce kg, repeticiones y RIR para recibir la recomendación.',next:null};
+  const step=stepFor(e),target=targetReps(e);
+  if(pain>=4)return {cls:'stop',text:'⛔ Detén este ejercicio. Dolor ≥4/10: no hagas otra serie.',next:null};
+  if(pain===3){const n=changedWeight(weight,-.10,step);return {cls:'warn',text:`⚠️ Dolor 3/10: no subas. Si continúas, baja a ${n} kg y reduce recorrido.`,next:n};}
+  if(reps<target||rir<=1){const n=changedWeight(weight,-.10,step);return {cls:'warn',text:`↓ Demasiado exigente. Próxima serie: ${n} kg.`,next:n};}
+  if(rir<=3)return {cls:'good',text:`✓ Peso adecuado. Mantén ${weight} kg: estás en RIR ${rir}.`,next:weight};
+  const pct=rir===4?.05:.10,n=changedWeight(weight,pct,step);return {cls:'good',text:`↑ Demasiado fácil. Próxima serie: ${n} kg (${pct===.05?'+5 %':'+10 %'} aprox.).`,next:n};
+}
+function updateSetAdvice(ei,si){
+  if(!activeWorkout||Number.isNaN(ei)||Number.isNaN(si))return;
+  const e=activeWorkout.exercises[ei],get=k=>document.querySelector(`[data-e="${ei}"][data-s="${si}"][data-k="${k}"]`);
+  const result=adviceFor(e,Number(get('weight').value),Number(get('reps').value),get('rir').value===''?NaN:Number(get('rir').value),Number(get('pain').value)||0),box=document.getElementById(`advice-${ei}-${si}`);
+  box.className=`advice ${result.cls}`;box.textContent=result.text;
+  if(get('done').checked&&result.next!==null&&si+1<e.sets){const next=document.querySelector(`[data-e="${ei}"][data-s="${si+1}"][data-k="weight"]`);if(!next.value||next.dataset.auto==='1'){next.value=result.next;next.dataset.auto='1'}}
+}
+function closeWorkout(){document.getElementById('workoutModal').classList.remove('open');activeWorkout=null}
+function saveWorkout(){if(!activeWorkout)return;activeWorkout.exercises.forEach((e,ei)=>{e.records=[];for(let si=0;si<e.sets;si++){const get=k=>document.querySelector(`[data-e="${ei}"][data-s="${si}"][data-k="${k}"]`);if(get('done').checked)e.records.push({weight:Number(get('weight').value)||0,reps:Number(get('reps').value)||0,rir:get('rir').value===''?null:Number(get('rir').value),pain:Number(get('pain').value)||0})}e.pain=e.records.length?Math.max(...e.records.map(r=>r.pain||0)):0});const completed=activeWorkout.exercises.reduce((a,e)=>a+e.records.length,0);if(!completed&&!confirm('No has marcado ninguna serie como hecha. ¿Guardar igualmente?'))return;state.sessions.push({id:Date.now(),date:dateISO(),created:new Date().toISOString(),week:state.week,workoutId:activeWorkout.id,name:activeWorkout.name,exercises:activeWorkout.exercises});persist();closeWorkout();render();alert('Sesión guardada')}
+['painRest','painTrain'].forEach(id=>document.getElementById(id).oninput=e=>document.getElementById(id+'Val').textContent=e.target.value);
+document.querySelectorAll('[data-toggle]').forEach(b=>b.onclick=()=>{const k=b.dataset.toggle;kneeFlags[k]=!kneeFlags[k];b.classList.toggle('on',kneeFlags[k])});
+document.getElementById('kneeForm').onsubmit=e=>{e.preventDefault();state.checkins.push({id:Date.now(),date:dateISO(),created:new Date().toISOString(),week:state.week,painRest:Number(document.getElementById('painRest').value),painTrain:Number(document.getElementById('painTrain').value),nextDay:document.getElementById('nextDay').value,notes:document.getElementById('kneeNotes').value.trim(),...kneeFlags});persist();e.target.reset();document.getElementById('painRestVal').textContent='0';document.getElementById('painTrainVal').textContent='0';kneeFlags={swelling:false,stiffness:false,locking:false,instability:false};document.querySelectorAll('[data-toggle]').forEach(x=>x.classList.remove('on'));render();switchTab('home')}
+function renderKneeHistory(){const el=document.getElementById('kneeHistory'),items=[...state.checkins].reverse().slice(0,8);el.innerHTML=items.length?items.map(c=>{const s=classify(c);return `<div class="card"><div class="workoutHead"><div><div class="tag">${niceDate(c.date)} · SEMANA ${c.week||state.week}</div><h3>${s.title}</h3></div><div class="count" style="color:${s.level==='red'?'var(--red)':s.level==='orange'?'var(--orange)':'var(--green)'}">${c.painTrain}/10</div></div><div class="tiny">Reposo ${c.painRest}/10 · 24 h: ${esc(c.nextDay)}${c.swelling?' · inflamación':''}${c.stiffness?' · rigidez':''}${c.locking?' · bloqueo':''}${c.instability?' · fallo':''}</div>${c.notes?`<p>${esc(c.notes)}</p>`:''}</div>`}).join(''):`<div class="empty">Todavía no hay controles guardados.</div>`}
+document.getElementById('recoveryForm').onsubmit=e=>{e.preventDefault();state.recovery.push({id:Date.now(),date:dateISO(),created:new Date().toISOString(),type:document.getElementById('recoveryType').value,minutes:Number(document.getElementById('recoveryMinutes').value),notes:document.getElementById('recoveryNotes').value.trim()});persist();document.getElementById('recoveryNotes').value='';render()}
+function renderRecovery(){const items=[...state.recovery].reverse().slice(0,8);document.getElementById('recoveryHistory').innerHTML=items.length?items.map(r=>`<div class="card"><div class="exerciseLine" style="border:0;padding:0"><b>${esc(r.type)}</b><span>${r.minutes} min · ${niceDate(r.date)}</span></div>${r.notes?`<p class="tiny">${esc(r.notes)}</p>`:''}</div>`).join(''):`<div class="empty">Todavía no hay recuperaciones guardadas.</div>`}
+function recent(arr,days=7){const t=Date.now()-days*86400000;return arr.filter(x=>new Date(x.created).getTime()>=t)}
+function renderStats(){const ss=recent(state.sessions),cc=recent(state.checkins),rr=recent(state.recovery);document.getElementById('sessions7').textContent=ss.length;document.getElementById('sets7').textContent=ss.reduce((a,s)=>a+s.exercises.reduce((b,e)=>b+(e.records?.length||0),0),0);document.getElementById('pain7').textContent=cc.length?(cc.reduce((a,c)=>a+c.painTrain,0)/cc.length).toFixed(1):'—';document.getElementById('recovery7').textContent=rr.length;document.getElementById('allSessions').textContent=state.sessions.length;document.getElementById('allSets').textContent=state.sessions.reduce((a,s)=>a+s.exercises.reduce((b,e)=>b+(e.records?.length||0),0),0)}
+function renderProgress(){const best={};state.sessions.forEach(s=>s.exercises.forEach(e=>(e.records||[]).forEach(r=>{best[e.name]=Math.max(best[e.name]||0,r.weight||0)})));const vals=Object.entries(best).filter(x=>x[1]>0),max=Math.max(1,...vals.map(x=>x[1]));document.getElementById('exerciseProgress').innerHTML=vals.length?vals.sort((a,b)=>b[1]-a[1]).map(([n,v])=>`<div class="progressRow"><div class="progressMeta"><span>${esc(n)}</span><b>${v} kg</b></div><div class="bar"><i style="width:${v/max*100}%"></i></div></div>`).join(''):`<div class="empty">Registra tus primeras cargas para ver la evolución.</div>`}
+function coachText(){const ss=[...state.sessions].reverse().slice(0,6),cc=[...state.checkins].reverse().slice(0,7);return `INFORME PREHAB · CARLOS\nFecha: ${dateISO()}\nFase: preoperatorio meniscal · rodilla izquierda\nSemana: ${state.week}/5\n\nREGLA DE SEGURIDAD\nDolor 0–2 y sin reacción: valorar progresión. Dolor 3 o peor a 24 h: mantener/reducir. Dolor ≥4, derrame, bloqueo o fallo: no progresar.\n\nÚLTIMOS CONTROLES DE RODILLA\n${cc.length?cc.map(c=>`${c.date}: reposo ${c.painRest}/10; entrenamiento ${c.painTrain}/10; 24 h ${c.nextDay}; inflamación ${c.swelling?'sí':'no'}; rigidez ${c.stiffness?'sí':'no'}; bloqueo ${c.locking?'sí':'no'}; fallo ${c.instability?'sí':'no'}${c.notes?`; notas: ${c.notes}`:''}`).join('\n'):'Sin controles.'}\n\nÚLTIMAS SESIONES\n${ss.length?ss.map(s=>`${s.date} · ${s.name}\n${s.exercises.map(e=>`- ${e.name}: ${(e.records||[]).map(r=>`${r.weight} kg × ${r.reps} (RIR ${r.rir??'—'}, dolor ${r.pain??e.pain??0}/10)`).join(' | ')||'sin series'}; dolor máximo ${e.pain}/10`).join('\n')}`).join('\n\n'):'Sin sesiones.'}\n\nCONSULTA\nRevisa mi tolerancia y propón si debo mantener, subir o reducir carga/volumen en la próxima sesión. No cambies nada sin explicarme el motivo.`}
+async function copyCoachReport(){const t=coachText();try{await navigator.clipboard.writeText(t);alert('Informe copiado. Ya puedes pegarlo en ChatGPT.')}catch(e){showCoachReport();alert('Mantén pulsado sobre el informe para copiarlo.')}}
+function showCoachReport(){document.getElementById('coachReport').textContent=coachText();document.getElementById('reportModal').classList.add('open')}
+function exportBackup(){const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`prehab-copia-${dateISO()}.json`;a.click();URL.revokeObjectURL(a.href)}
+document.getElementById('backupInput').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x.plan||!x.sessions)throw 0;if(confirm('Esto sustituirá los datos actuales. ¿Continuar?')){state=x;persist();render()}}catch(_){alert('La copia no es válida')}};r.readAsText(f)};
+render();
+</script>
+</body>
+</html>
